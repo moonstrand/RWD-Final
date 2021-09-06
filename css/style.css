@@ -13,6 +13,10 @@ img {
     margin:0 auto;
 }
 
+.wrap a {
+    text-decoration: none;
+}
+
 /* 表頭區塊 */
 
 .header {
@@ -54,7 +58,6 @@ img {
 
 .menu a {
     display: block;
-    text-decoration: none;
     color: #fff;
     padding: 18px;
     transition:all 0.3s;
@@ -127,7 +130,97 @@ img {
     font-size: 16px;
 }
 
-/* 三欄特色 */
+/* 表尾區塊 */
+
+.footer {
+    background: #efe9e7;
+    color: #3D1101;
+    padding:43px 50px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.3
+}
+
+.footer .information, .footer .contact, .footer .logo {
+    width: 31.33333%;
+}
+
+.footer h2 {
+    font-size: 24px;
+    padding-bottom: 16px;
+}
+
+.contact ul li {
+    list-style: disc;
+    margin-left: 24px;
+}
+
+.footer .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo .hex {
+    display: block;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 243px;
+    height: 48px;
+    background: url(../images/logo_l\(null\).svg) no-repeat;
+}
+
+.social {
+    display: flex;
+}
+
+.social a {
+    font-size: 36px;
+    margin-left: 12px;
+}
+
+.social .google {
+    color: #DB4437;
+}
+
+.social .tw {
+    color: #41ABE1;
+}
+
+.social .fb {
+    color: #3A5795;
+}
+
+@media (max-width:768px) {
+    .footer {
+        padding:43px 10px;
+    }
+
+    .footer .logo {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width:568px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 5px;
+    }
+
+    .footer .information, .footer .contact, .footer .logo {
+        width: 90%;
+        padding: 15px 0;
+    }
+
+    .logo .hex {
+        margin-bottom: 20px;
+    }
+}
+
+/* 首頁 三欄特色 */
 
 .main {
     color: #3D1101;
@@ -229,7 +322,7 @@ img {
     }
 }
 
-/* 主廚介紹區塊 */
+/* 首頁 主廚介紹區塊 */
 
 .section {
     background: #3D1101;
@@ -272,7 +365,7 @@ img {
     }
 }
 
-/* 評論區塊 */
+/* 首頁 評論區塊 */
 
 .cite {
     color: #3D1101;
@@ -345,7 +438,7 @@ img {
     }
 }
 
-/* 訂位區塊 */
+/* 首頁 訂位區塊 */
 
 .position {
     background: #FAFAFA;
@@ -426,94 +519,105 @@ img {
         padding: 0;
     }
 }
+/* 首頁結束 */
 
 
-/* 表尾區塊 */
+/* 登入介面 */
 
-.footer {
-    background: #efe9e7;
-    color: #3D1101;
-    padding:43px 50px;
-    display: flex;
-    justify-content: space-between;
-    line-height: 1.3
+.login {
+    background: #fff6f6;
+    padding: 50px 0;
 }
 
-.footer .information, .footer .contact, .footer .logo {
-    width: 31.33333%;
-}
-
-.footer h2 {
-    font-size: 24px;
-    padding-bottom: 16px;
-}
-
-.contact ul li {
-    list-style: disc;
-    margin-left: 24px;
-}
-
-.footer .logo {
+.login-main {
+    max-width: 300px;
+    margin:0 auto;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
+    color: #3D1101;
 }
 
-.logo .hex {
-    display: block;
-    text-indent: 101%;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 243px;
-    height: 48px;
-    background: url(../images/logo_l\(null\).svg) no-repeat;
+.login-main h2, .login-main h3 {
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 5px;
 }
 
-.social {
+.login-main h3 {
+    font-size: 20px;
+    padding-bottom: 35px;
+}
+
+.login-main form {
+    border-top: 3px solid #FF5E45;
+    padding: 15px 21px;
+    box-shadow: 2px 2px 4px 1px #b3b3b3;
+}
+
+.login-main form h4 {
+    font-weight: bold;
+    font-size: 18px;
+    padding-bottom: 16px;
+    text-align: center;
+}
+
+.login-main .login-mail input, .login-main .login-password input {
+    width: 100%;
+    padding: 5px 0 5px 30px;
+    margin-top: 3px;
+}
+
+.login-main .login-mail input {
+    margin-bottom: 15px;
+}
+
+.login-mail, .login-password {
+    position: relative;
+}
+
+.login-mail .far.fa-envelope, .login-password .fas.fa-lock {
+    position: absolute;
+    color: rgba(61,17,0,0.50);
+    top: 40%;
+    left: 4%;
+}
+
+.login-password .fas.fa-lock {
+    top: 52%;
+    left: 4%;
+}
+
+.login-main .forget {
+    font-size: 14px;
+    color: #FF5E45;
+}
+
+.login-main .forget:hover {
+    color: #3D1101;
+}
+
+.login-btn {
     display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
 }
 
-.social a {
-    font-size: 36px;
-    margin-left: 12px;
+.login-main .login-btn input{
+    color: #fff;
+    border-radius: 3px;
+    padding: 6px 40px;
+    transition: 0.4s ease;
 }
 
-.social .google {
-    color: #DB4437;
+.login-main .login-btn input:hover {
+    opacity: 0.6;
 }
 
-.social .tw {
-    color: #41ABE1;
+.login-btn .orange {
+    background: #F56C23;
 }
 
-.social .fb {
-    color: #3A5795;
-}
-
-@media (max-width:768px) {
-    .footer {
-        padding:43px 10px;
-    }
-
-    .footer .logo {
-        justify-content: space-evenly;
-    }
-}
-
-@media (max-width:568px) {
-    .footer {
-        flex-direction: column;
-        align-items: center;
-        padding: 20px 5px;
-    }
-
-    .footer .information, .footer .contact, .footer .logo {
-        width: 90%;
-        padding: 15px 0;
-    }
-
-    .logo .hex {
-        margin-bottom: 20px;
-    }
+.login-btn .gray {
+    background: rgba(0, 0, 0, 0.35);
 }
