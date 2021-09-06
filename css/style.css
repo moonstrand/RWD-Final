@@ -1,0 +1,519 @@
+*,*:before,*:after {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.wrap {
+    position: relative;
+    max-width: 1024px;
+    margin:0 auto;
+}
+
+/* 表頭區塊 */
+
+.header {
+    position: absolute;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.75);
+    display: flex;
+    justify-content: space-between;
+}
+
+.header h1 a {
+    display: block;
+    width: 120px;
+    height: 24px;
+    background: url(../images/logo_w\(null\).svg) no-repeat;
+    margin: 16px 42px;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+/* 表頭選單 */
+
+.menu {
+    display: flex;
+    padding-right: 30px;
+}
+
+.showmenu {
+    display: none;
+    color: #fff;
+    padding: 18px;
+    transition:all 0.3s;
+}
+
+.showmenu:hover {
+    color: orange;
+}
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    padding: 18px;
+    transition:all 0.3s;
+}
+
+.menu li a:hover {
+    background: #FAFAFA;
+    color: #000;
+}
+
+@media (max-width:568px) {
+    .showmenu {
+        display: block;
+    }
+
+    .menu {
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.8s;
+        position: absolute;
+        z-index: 99;
+        top: 57px;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 1);
+        border-top: 1px solid rgba(255, 255, 255, 0.35) ;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .menu li {
+        width: 100%;
+    }
+
+    .menu a {
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+    }
+
+    .menu-show .menu {
+        max-height: 159px;
+    }
+}
+
+/* 橫幅區塊 */
+
+.banner {
+    background: url(../images/header_desktop.png);
+    background-position-x: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 420px;
+}
+
+.banner-content {
+    background: rgba(0, 0, 0, 0.35);
+    color: #fff;
+    text-align: center;
+    line-height: 1.5em;
+	padding: 28px 42px;
+}
+
+.banner-content h2{
+    font-size: 36px;
+    padding-bottom: 20px;
+}
+
+.banner-content p {
+    font-size: 16px;
+}
+
+/* 三欄特色 */
+
+.main {
+    color: #3D1101;
+    background: #efe9e7;
+    padding: 30px;
+}
+
+.main h2 {
+    position: relative;
+    font-size: 20px;
+    text-align: center;
+    line-height: 32px;
+    padding-bottom: 31px;
+}
+
+.main h2:before,.main h2:after {
+    content: "";
+    position: absolute;
+    top: 35%;
+    background: #979797;
+    width: 10%;
+    height: 1px;
+}
+
+.main h2:before {
+    left: 25%;
+}
+
+.main h2:after {
+    right: 25%;
+}
+
+.main .item {
+    display: flex;
+    justify-content: space-between;
+}
+
+.item img {
+    max-width: 75%;
+    border-radius: 50%;
+}
+
+.item li {
+    width: 31.3333%;
+    margin:0 1%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.item h3 {
+    font-size: 18px;
+    padding: 20px 0 11px 0;
+}
+
+.item p {
+    line-height: 1.3;
+}
+
+@media (max-width:768px) {
+    .item li {
+        width: 30%;
+    }
+
+    .main h2:before {
+        left: 20%;
+    }
+    
+    .main h2:after {
+        right: 20%;
+    }
+}
+
+@media (max-width:568px) {
+    .main h2 {
+        padding-bottom: 10px;
+    }
+
+    .main h2:before {
+        left: 15%;
+    }
+    
+    .main h2:after {
+        right: 15%;
+    }
+
+    .main .item {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item img {
+        max-width: 60%;
+    }
+
+    .item li {
+        width: 80%;
+        margin: 30px 1%;
+    }
+}
+
+/* 主廚介紹區塊 */
+
+.section {
+    background: #3D1101;
+    color: #EFE9E7;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.section img {
+    width: 50%;
+    object-fit: cover;
+}
+
+.article {
+    width: 45%;
+    padding: 50px 20px;
+}
+
+.article h2 {
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.article p {
+    line-height: 1.5;
+}
+
+@media (max-width:568px) {
+    .section {
+        flex-direction: column;
+    }
+
+    .section img {
+        width: 100%;
+    }
+
+    .article {
+        width: 100%;
+        padding: 30px;
+    }
+}
+
+/* 評論區塊 */
+
+.cite {
+    color: #3D1101;
+    background: #efe9e7;
+    padding: 50px 0;
+}
+
+.cite h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #3D1101;
+    padding-bottom: 32px;
+}
+
+.cite ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin:0 2%;
+}
+
+.cite li {
+    display: flex;
+    width: 31.33333%;
+}
+
+.cite img {
+    width: 67px;
+    height: 67px;
+    border-radius: 50%;
+}
+
+.cite-content {
+    padding:0 10px;
+}
+
+.cite-content h3 {
+    font-size: 18px;
+    padding-bottom: 22px;
+}
+
+.cite-content p {
+    line-height: 24px;
+}
+
+.cite .cite-content span {
+    display: block;
+    text-align: right;
+	padding-top: 16px;
+}
+
+@media (max-width:768px) {
+    .cite-content {
+        margin-left: 5px;
+    }
+}
+
+@media (max-width:568px) {
+    .cite ul {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .cite li {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .cite li:hover {
+        background: rgba(230, 218, 215, 0.9);
+    }
+}
+
+/* 訂位區塊 */
+
+.position {
+    background: #FAFAFA;
+    color: #3D1101;
+    padding: 50px 0;
+}
+
+.position h2 {
+    font-size: 24px;
+    text-align: center;
+    padding-bottom: 38px;
+    line-height: 1.3;
+}
+
+.position .map-form {
+    display: flex;
+    margin: 0 2%;
+}
+
+.map-form img {
+    max-width: 45%;
+}
+
+.position form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 5%;
+}
+
+.position label {
+    font-size: 14px;
+}
+
+.position input {
+    padding: 10px 15px;
+    margin: 6px 0;
+}
+
+.position .select {
+    display: flex;
+}
+
+.select label {
+    padding: 6px 5px 0 0;
+}
+
+.select .no {
+    margin-left: 40px;
+}
+
+.btn {
+    text-align: end;
+}
+
+.btn .send {
+    color: #fff;
+    background: #F56C23;
+}
+
+.btn .send:hover {
+    opacity: 0.8;
+}
+
+@media (max-width:568px) {
+    .position .map-form {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .map-form img {
+        max-width: 90%;
+        padding-bottom: 30px;
+    }
+
+    .position form {
+        width: 90%;
+        padding: 0;
+    }
+}
+
+
+/* 表尾區塊 */
+
+.footer {
+    background: #efe9e7;
+    color: #3D1101;
+    padding:43px 50px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.3
+}
+
+.footer .information, .footer .contact, .footer .logo {
+    width: 31.33333%;
+}
+
+.footer h2 {
+    font-size: 24px;
+    padding-bottom: 16px;
+}
+
+.contact ul li {
+    list-style: disc;
+    margin-left: 24px;
+}
+
+.footer .logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.logo .hex {
+    display: block;
+    text-indent: 101%;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 243px;
+    height: 48px;
+    background: url(../images/logo_l\(null\).svg) no-repeat;
+}
+
+.social {
+    display: flex;
+}
+
+.social a {
+    font-size: 36px;
+    margin-left: 12px;
+}
+
+.social .google {
+    color: #DB4437;
+}
+
+.social .tw {
+    color: #41ABE1;
+}
+
+.social .fb {
+    color: #3A5795;
+}
+
+@media (max-width:768px) {
+    .footer {
+        padding:43px 10px;
+    }
+
+    .footer .logo {
+        justify-content: space-evenly;
+    }
+}
+
+@media (max-width:568px) {
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 5px;
+    }
+
+    .footer .information, .footer .contact, .footer .logo {
+        width: 90%;
+        padding: 15px 0;
+    }
+
+    .logo .hex {
+        margin-bottom: 20px;
+    }
+}
