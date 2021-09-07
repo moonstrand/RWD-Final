@@ -155,6 +155,15 @@ img {
     margin-left: 24px;
 }
 
+.contact li a {
+    color: #3D1101;
+    transition: 0.3s ease;
+}
+
+.contact li a:hover {
+    opacity: 0.6;
+}
+
 .footer .logo {
     display: flex;
     flex-direction: column;
@@ -603,14 +612,14 @@ img {
     padding-top: 30px;
 }
 
-.login-main .login-btn input{
+.login-main .login-btn input, .login-main .login-btn a{
     color: #fff;
     border-radius: 3px;
     padding: 6px 40px;
     transition: 0.4s ease;
 }
 
-.login-main .login-btn input:hover {
+.login-main .login-btn input:hover, .login-main .login-btn a:hover {
     opacity: 0.6;
 }
 
@@ -620,4 +629,114 @@ img {
 
 .login-btn .gray {
     background: rgba(0, 0, 0, 0.35);
+}
+
+/* 登入介面結束 */
+
+/* 註冊介面 */
+
+.register {
+    background: #fff6f6;
+    color: #3D1101;
+    padding: 50px 0;
+}
+
+.register h2, .register h3 {
+    font-size: 48px;
+    font-weight: bold;
+    padding-bottom: 5px;
+    text-align: center;
+}
+
+.register h3 {
+    font-size: 20px;
+    padding-bottom: 35px;
+}
+
+.register form {
+    max-width: 620px;
+    margin:0 auto;
+    border-top: 3px solid #FF5E45;
+    padding: 15px;
+    box-shadow: 2px 2px 4px 1px #b3b3b3;
+}
+
+.register form h4 {
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 16px;
+}
+
+.register-main {
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-main .rule, .register-main .register-form {
+    width: 48%;
+    margin: 0 1%;
+}
+
+.rule p {
+    font-size: 14px;
+    line-height: 1.3;
+}
+
+.rule span {
+    font-size: 18px;
+}
+
+.register-mail input, .register-password input {
+    width: 100%;
+    padding: 5px 0 5px 30px;
+    margin: 3px 0 15px 0;
+}
+
+.register-mail, .register-password {
+    position: relative;
+}
+
+.register-mail .far.fa-envelope, .register-password .fas.fa-lock {
+    position: absolute;
+    color: rgba(61,17,0,0.50);
+    top: 41%;
+    left: 3%;
+}
+
+.register-password .fas.fa-lock {
+    top: 23%;
+}
+
+.register-password .confirm {
+    margin: 3px 0 0 0;
+}
+
+.register-form .account {
+    font-size: 14px;
+    color: #FF5E45;
+}
+
+.register-form .account:hover {
+    color: #3D1101;
+}
+
+.register-btn {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.register-form .orange {
+    font-size: 14px;
+    display: block;
+    text-align: center;
+    margin-top: 36px;
+    padding: 7px 48px;
+    background: #F56C23;
+    color: #fff;
+    border-radius: 3px;
+    transition: 0.4s ease;
+}
+
+.register-btn .orange:hover {
+    opacity: 0.7;
 }
