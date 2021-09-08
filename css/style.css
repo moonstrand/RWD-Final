@@ -38,6 +38,12 @@ img {
     overflow: hidden;
 }
 
+@media (max-width:320px) {
+    .header h1 a {
+        margin: 16px 20px;
+    }
+}
+
 /* 表頭選單 */
 
 .menu {
@@ -123,11 +129,18 @@ img {
 
 .banner-content h2{
     font-size: 36px;
+    line-height: 1.2;
     padding-bottom: 20px;
 }
 
 .banner-content p {
     font-size: 16px;
+}
+
+@media (max-width:568px) {
+    .banner h2 span {
+        display: block;
+    }
 }
 
 /* 表尾區塊 */
@@ -179,6 +192,7 @@ img {
     width: 243px;
     height: 48px;
     background: url(../images/logo_l\(null\).svg) no-repeat;
+    padding: 0;
 }
 
 .social {
@@ -204,11 +218,17 @@ img {
 
 @media (max-width:768px) {
     .footer {
-        padding:43px 10px;
+        flex-direction: column;
+        padding: 15px 5px 5px 5px;
+    }
+
+    .footer .information, .footer .contact, .footer .logo {
+        width: 100%;
+        padding: 15px 0;
     }
 
     .footer .logo {
-        justify-content: space-evenly;
+        justify-content: flex-end;
     }
 }
 
@@ -216,16 +236,6 @@ img {
     .footer {
         flex-direction: column;
         align-items: center;
-        padding: 20px 5px;
-    }
-
-    .footer .information, .footer .contact, .footer .logo {
-        width: 90%;
-        padding: 15px 0;
-    }
-
-    .logo .hex {
-        margin-bottom: 20px;
     }
 }
 
@@ -304,10 +314,6 @@ img {
 }
 
 @media (max-width:568px) {
-    .main h2 {
-        padding-bottom: 10px;
-    }
-
     .main h2:before {
         left: 15%;
     }
@@ -328,6 +334,16 @@ img {
     .item li {
         width: 80%;
         margin: 30px 1%;
+    }
+}
+
+@media (max-width:320px) {
+    .main h2:before {
+        left: 0%;
+    }
+
+    .main h2:after {
+        right: 0%;
     }
 }
 
@@ -464,18 +480,19 @@ img {
 
 .position .map-form {
     display: flex;
+    justify-content: space-between;
     margin: 0 2%;
 }
 
 .map-form img {
-    max-width: 45%;
+    max-width: 48%;
+    object-fit: cover;
 }
 
 .position form {
     display: flex;
     flex-direction: column;
-    width: 50%;
-    padding-left: 5%;
+    width: 48%;
 }
 
 .position label {
@@ -512,45 +529,48 @@ img {
     opacity: 0.8;
 }
 
-@media (max-width:568px) {
+@media (max-width:768px) {
     .position .map-form {
         flex-direction: column;
         align-items: center;
+    }
+    
+    .position form {
+        width: 90%;
+        padding: 0;
     }
 
     .map-form img {
         max-width: 90%;
         padding-bottom: 30px;
     }
-
-    .position form {
-        width: 90%;
-        padding: 0;
-    }
 }
+
 /* 首頁結束 */
 
 
-/* 登入介面 */
+/* 登入頁面 */
 
 .login {
     background: #fff6f6;
+    color: #3D1101;
     padding: 50px 0;
 }
 
-.login-main {
+/* .login-main {
     max-width: 300px;
     margin:0 auto;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: #3D1101;
-}
+} */
 
 .login-main h2, .login-main h3 {
     font-size: 48px;
     font-weight: bold;
     padding-bottom: 5px;
+    text-align: center;
 }
 
 .login-main h3 {
@@ -559,6 +579,8 @@ img {
 }
 
 .login-main form {
+    max-width: 300px;
+    margin:0 auto;
     border-top: 3px solid #FF5E45;
     padding: 15px 21px;
     box-shadow: 2px 2px 4px 1px #b3b3b3;
@@ -585,14 +607,14 @@ img {
     position: relative;
 }
 
-.login-mail .far.fa-envelope, .login-password .fas.fa-lock {
+.login-mail i, .login-password i {
     position: absolute;
     color: rgba(61,17,0,0.50);
     top: 40%;
     left: 4%;
 }
 
-.login-password .fas.fa-lock {
+.login-password i {
     top: 52%;
     left: 4%;
 }
@@ -631,9 +653,9 @@ img {
     background: rgba(0, 0, 0, 0.35);
 }
 
-/* 登入介面結束 */
+/* 登入頁面結束 */
 
-/* 註冊介面 */
+/* 註冊頁面 */
 
 .register {
     background: #fff6f6;
@@ -696,14 +718,14 @@ img {
     position: relative;
 }
 
-.register-mail .far.fa-envelope, .register-password .fas.fa-lock {
+.register-mail i, .register-password i {
     position: absolute;
     color: rgba(61,17,0,0.50);
     top: 41%;
     left: 3%;
 }
 
-.register-password .fas.fa-lock {
+.register-password i {
     top: 23%;
 }
 
@@ -740,3 +762,302 @@ img {
 .register-btn .orange:hover {
     opacity: 0.7;
 }
+
+@media (max-width:320px) {
+    .register-main {
+        flex-direction: column;
+    }
+
+    .register-main .rule, .register-main .register-form {
+        width: 100%;
+    }
+
+    .register-main .rule {
+        padding-bottom: 15px;
+    }
+
+    .register-form .orange {
+        width: 100%;
+        margin: 15px auto 0 auto;
+    }
+}
+
+/* 註冊頁面結束 */
+
+/* 購物車頁面 */
+
+.cart {
+    background: #fff6f6;
+    color: #3D1101;
+    display: flex;
+    padding: 40px 35px;
+}
+
+@media (max-width:768px) {
+    .cart {
+        flex-direction: column;
+    }
+}
+
+.aside {
+    width: 23%;
+}
+
+.aside i {
+    font-size: 26px;
+    padding-right: 15px;
+}
+
+.aside h2 {
+    font-size: 20px;
+    padding-bottom: 16px;
+}
+
+.aside a {
+    display: block;
+    color: #3D1101;
+    padding: 15px 0 15px 5px;
+    border-bottom: 1px solid #3D1101;
+    transition: 0.3s ease;
+}
+
+.aside a:hover {
+    background: #3D1101;
+    color: #FAFAFA;
+}
+
+@media (max-width:768px) {
+    .aside {
+        width: 100%;
+        text-align: center;
+    }
+    .aside ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .aside a {
+        font-size: 14px;
+        border-bottom: 1px solid #3D1101;
+    }
+}
+
+.cart-container {
+    width: 78%;
+    padding-left: 2%;
+}
+
+.cart-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 26px;
+}
+
+.search {
+    position: relative;
+    width: 70%;
+}
+
+.search input {
+    width: 90%;
+    padding: 7px 0;
+    border-radius: 0;
+    border: 3px solid #3D1101;
+    border-right: none;
+    background: #fff6f6;
+}
+
+.search a {
+    position: absolute;
+    background: #3D1101;
+    color: #fff6f6;
+    padding: 6.5px;
+    border: 3px solid #3D1101;
+    transition: 0.3s ease;
+}
+
+.search a:hover {
+    background: #a32c00;
+}
+
+.cart-list a {
+    font-size: 18px;
+    font-weight: bold;
+    color: #3D1101;
+    transition: 0.3s ease;
+}
+
+.cart-list a:hover {
+    color: #a32c00;
+}
+
+.cart-list .pay {
+    padding-right: 16px;
+    border-right: 1px solid #3D1101;
+}
+
+.cart-list i {
+    position: relative;
+    padding-left: 16px;
+    font-size: 25px;
+}
+
+.cart-list i span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    font-size: 12px;
+    padding: 2px 4px;
+    color: #fff;
+    background: #FF5E45;
+    border: 1px solid #fff6f6;
+    border-radius: 50%;
+}
+
+@media (max-width:768px) {
+    .cart-container {
+        width: 100%;
+        padding: 30px 0 0 0;
+    }
+}
+
+@media (max-width:568px) {
+    .search {
+        width: 65%;
+    }
+}
+
+@media (max-width:320px) {
+    .cart-nav {
+        flex-direction: column;
+    }
+
+    .search input {
+        padding: 5px 0;
+        border: 2px solid #3D1101;
+        border-right: none;
+    }
+
+    .search {
+        width: 100%;
+        padding-bottom: 20px;
+    }
+
+    .search a {
+        padding: 3.5px;
+    }
+}
+
+.cart-item ul {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.cart-item li {
+    width: 32.3333%;
+    position: relative;
+    text-align: center;
+    box-shadow: 2px 2px 4px 0 #979797;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+.cart-item .like {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #FFF;
+    font-size: 23px;
+}
+
+.cart-item .far.fa-heart:hover {
+    font-weight: bold;
+}
+
+.cart-item .far.fa-heart.fill {
+    font-weight: bold;
+}
+
+.cart-item .hot-wrap {
+    width: 100px;
+    height: 100px;
+    overflow: hidden;
+    position: absolute;
+    top: -5px;
+    right: -5px;
+}
+
+.cart-item .hot-wrap .hot {
+    position: relative;
+    background: #F56C23;
+    color: #fff;
+    top: 18px;
+    right: 10px;
+    width: 150px;
+    padding: 7px 5px;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 4px #FF5E45;
+}
+
+.cart-item h2 {
+    padding: 11px 0 5px 0;
+    font-size: 20px;
+}
+
+.cart-item h3 {
+    position: relative;
+    font-size: 12px;
+    padding-bottom: 50px;
+}
+
+.cart-item h3:before {
+    content: "";
+    position: absolute;
+    top: 45%;
+    left: 35%;
+    background: #3D1101;
+    width: 30%;
+    height: 1px;
+}
+
+.cart-item p {
+    font-size: 20px;
+    padding-bottom: 30px;
+}
+
+.cart-item .join {
+    display: block;
+    width: 90%;
+    margin:0 auto;
+    padding: 4px 0;
+    color: #FF5E45;
+    border: 2px solid #FF5E45;
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+.cart-item .join:hover {
+    color: #FAFAFA;
+    background: #FF5E45;
+}
+
+.cart-item .join i {
+    font-size: 15px;
+    margin-right: 9px;
+}
+
+@media (max-width:568px) {
+    .cart-item li {
+        width: 45%;
+    }
+}
+
+@media (max-width:320px) {
+    .cart-item li {
+        width: 100%;
+    }
+}
+
+/* 購物車頁面結束 */
