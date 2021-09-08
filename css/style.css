@@ -17,6 +17,7 @@ img {
     text-decoration: none;
 }
 
+/* layout */
 /* 表頭區塊 */
 
 .header {
@@ -239,6 +240,9 @@ img {
     }
 }
 
+/* layout結束 */
+
+/* 首頁 */
 /* 首頁 三欄特色 */
 
 .main {
@@ -557,15 +561,6 @@ img {
     padding: 50px 0;
 }
 
-/* .login-main {
-    max-width: 300px;
-    margin:0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: #3D1101;
-} */
-
 .login-main h2, .login-main h3 {
     font-size: 48px;
     font-weight: bold;
@@ -799,6 +794,8 @@ img {
     }
 }
 
+/* 商品選單 */
+
 .aside {
     width: 23%;
 }
@@ -842,6 +839,8 @@ img {
     }
 }
 
+/* 商品區塊 */
+
 .cart-container {
     width: 78%;
     padding-left: 2%;
@@ -853,6 +852,8 @@ img {
     align-items: center;
     padding-bottom: 26px;
 }
+
+/* 搜尋欄、購物車 */
 
 .search {
     position: relative;
@@ -948,6 +949,8 @@ img {
         padding: 3.5px;
     }
 }
+
+/* 商品展示 */
 
 .cart-item ul {
     display: flex;
